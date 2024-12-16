@@ -10,12 +10,15 @@ buildscript {
 
 plugins {
 	id 'net.minecraftforge.gradle' version '5.1.+'
+	id 'org.moddingx.modgradle.sourcejar' version '[3,4)' apply false
 }
 
 apply plugin: 'org.spongepowered.mixin'
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
+
+apply plugin: 'org.moddingx.modgradle.sourcejar'
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
